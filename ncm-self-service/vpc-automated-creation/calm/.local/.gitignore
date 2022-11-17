@@ -1,0 +1,7 @@
+# Ignore everything in this folder
+*
+
+!cloud-init-data.yaml
+
+# Except this file
+!.gitignore

@@ -1,0 +1,15 @@
+#cloud-config
+ssh_pwauth: True
+password: nx2Tech123!
+users:
+- default
+- name: nutanix
+  gecos: nutanix
+  groups: sudo
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  lock-passwd: false
+  passwd: $1$RiKOiXSq$0uyuZY0eMai3iD8qRzT4T. #the password is nx2Tech123!
+package_upgrade: true
+runcmd:
+- "chown -hR nutanix:nutanix /home/nutanix/"
